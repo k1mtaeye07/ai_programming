@@ -39,11 +39,10 @@ def get_recommendations(input_text, model, data):
     return recommendations[['title','similarity','page_url']]
 
 # 입력 텍스트에 대한 영화 추천
-input_text = "아이언맨"
-recommendations = get_recommendations(input_text, model, movies_df)
+input_text = "어벤져스"
+recommendations= get_recommendations(input_text, model, movies_df)
 
 # 추천 결과 출력
 print("추천 영화")
 pd.set_option('display.max_colwidth', None)
 print(recommendations)
-

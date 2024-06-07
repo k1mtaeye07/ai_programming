@@ -36,5 +36,5 @@ def nouns_to_vector(nouns, model):
 movies_df['vector'] = movies_df['nouns'].apply(lambda nouns: nouns_to_vector(nouns, model))
 movies_df['vector'] = movies_df['vector'].apply(lambda x: x.tolist())
 movies_df.to_csv('./dataset/movie_vectors.csv', index=False)
-print("벡터 저장 완료")
+print("finished")
 
