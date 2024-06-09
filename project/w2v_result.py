@@ -39,7 +39,11 @@ def get_recommendations(input_text, model, data):
     return recommendations[['title','similarity','page_url']]
 
 # 입력 텍스트에 대한 영화 추천
-input_text = "어벤져스"
+#input_text = "공포 정신병원 폐가 배경"
+input_text = "어벤져스 토니 스타크"
+#input_text = "컴퓨터 바이러스"
+
+
 recommendations= get_recommendations(input_text, model, movies_df)
 
 # 추천 결과 출력

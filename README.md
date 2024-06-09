@@ -1,11 +1,12 @@
-# 한국어 영화 추천시스템 
+# word2vec을 활용한 영화 추천시스템
 
 - 데이터셋은 네이버영화 줄거리를 크롤링한 파일을 사용합니다.
   - (출처 : https://github.com/jbose038/naver-movie-recommendation/tree/master/dataset/movies04293.csv)
 - 한국어 형태소분석기 `konlpy` 를 사용합니다.
   - https://konlpy.org/ko/latest/
 
-이 모델을 테스트 하기 위해 `konlpy`, `jdk` 설치가 필요합니다.
+이 모델을 테스트 하기 위해 `konlpy`, `jdk` 설치가 필요합니다.  
+결과확인만 필요한 경우 colab 예제 : `w2v.ipynb` 파일을 참고합니다.
 
 ## 설치
 
@@ -43,35 +44,33 @@ colab 예제 : `w2v.ipynb`
 
 ## good case
 - input_text = "어벤져스 토니 스타크"
+  
+![4](https://github.com/k1mtaeye07/ai_programming/assets/106365897/008a93e9-2b4f-4e70-8552-d477eed2c886)
 
-![g1](https://github.com/k1mtaeye07/ai_programming/assets/106365897/a14a5955-3353-4fa7-a11a-85844df643c5)
+- input_text = "공포 정신병원 폐가 배경"
 
-
-- input_text = "공포 병원 배경"
-
-
-![g2](https://github.com/k1mtaeye07/ai_programming/assets/106365897/f65ea38b-39de-4809-b205-521fb0a3fc0e)
+![3](https://github.com/k1mtaeye07/ai_programming/assets/106365897/88a66b03-93d7-4542-9a05-a246f5074e87)
 
 
 ## bad case
 - input_text = "야호" ("야호" 키워드벡터값이 모델에 존재 하지 않는 경우)
 
-
 ![n1](https://github.com/k1mtaeye07/ai_programming/assets/106365897/2675243d-f56e-46b7-aa45-0c9507bfff8a)
 
 - input_text = "컴퓨터 바이러스" (키워드에 적합하지 않은 아쉬운결과)
 
-![a1](https://github.com/k1mtaeye07/ai_programming/assets/106365897/fd989327-cc10-494d-8af7-42df4d842f32)
+![2](https://github.com/k1mtaeye07/ai_programming/assets/106365897/5eafe500-912f-4418-8976-6d4f808a567a)
 
 
 ## 임베딩 프로젝터를 사용하여 시각화하기
 - 링크 : https://projector.tensorflow.org/
-- label = "음악"
+- label = "아이언맨"
 
-![e1](https://github.com/k1mtaeye07/ai_programming/assets/106365897/a8a734c4-b3fa-4ba8-b8a9-d615ee2a06ec)
+![6](https://github.com/k1mtaeye07/ai_programming/assets/106365897/50a0a207-3d3b-402c-9bc2-3c6b906cfbcd)
 
-- label = "병원"
+- label = "크리스마스"
 
-![e3](https://github.com/k1mtaeye07/ai_programming/assets/106365897/9254c00c-4489-445e-a1ec-05e95eb695da)
+![5](https://github.com/k1mtaeye07/ai_programming/assets/106365897/6807a969-ef5f-4450-8a14-d6ae5cb981d8)
+
 
 
