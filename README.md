@@ -9,7 +9,7 @@
 - 한국어 형태소분석기 `konlpy` 를 사용합니다.
   - (URL : https://konlpy.org/ko/latest/)
 
-이 모델을 테스트 하기 위해 `konlpy`, `jdk` 설치가 필요합니다.
+이 모델을 테스트 하기 위해 `konlpy`, `jdk` 설치가 필요합니다.  
 결과확인만 필요한 경우 colab 예제 : `w2v.ipynb` 파일을 참고합니다.
 
 ## 설치
